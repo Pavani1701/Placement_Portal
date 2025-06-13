@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Placement Portal</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <h1>Placement Portal</h1>
+    <nav>
+      <a href="#jobs">Jobs</a>
+      <a href="#apply">Apply</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section id="jobs">
+    <h2>Available Jobs</h2>
+    <div id="jobsList">
+      <!-- Job cards will load here dynamically -->
+    </div>
+  </section>
+  
+
+  <section id="apply">
+    <h2>Apply Now</h2>
+    <form id="applicationForm">
+      <input type="text" id="name" placeholder="Your Name" required />
+      <input type="email" id="email" placeholder="Your Email" required />
+      <input type="hidden" id="jobId" />
+<h4 id="jobTitleDisplay" style="margin: 0 0 10px 0;"></h4>
+
+      <button type="submit">Submit</button>
+    </form>
+    <p id="successMessage" style="display:none; color:green;">Application submitted successfully!</p>
+  </section>
+  
+
+
+  <section id="about">
+    <h2>About This Portal</h2>
+    <p>This is a demo portal to help students explore job opportunities and apply online.</p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>Email: placement@example.com</p>
+  </section>
+  <section id="admin-login">
+  <h2>Admin Login</h2>
+  <form id="adminLoginForm">
+    <input type="email" id="adminEmail" placeholder="Admin Email" required>
+<br><br>
+    <input type="password" id="adminPassword" placeholder="Password" required><br><br>
+    <button type="submit">Login</button>
+  </form>
+  <p id="loginError" style="color:red; display:none;">Invalid credentials</p>
+</section>
+<div id="adminPanel" style="display:none;">
+  <section id="admin">
+  <h2>Admin: Post a New Job</h2>
+  <form id="jobForm">
+    <input type="text" id="jobTitle" placeholder="Job Title" required /><br><br>
+    <input type="text" id="company" placeholder="Company Name" required /><br><br>
+    <textarea id="description" placeholder="Job Description" required></textarea><br><br>
+    <input type="date" id="deadline" required /><br><br>
+    <input type="text" id="eligibility" placeholder="Eligibility Criteria" required /><br><br>
+    <button type="submit">Post Job</button>
+  </form>
+  <p id="jobPostMessage" style="color: green; display: none;">Job posted successfully!</p>
+</section>
+</div>
+<section id="admin-applications" style="margin-top: 30px;">
+  <h2>Submitted Applications</h2>
+  <div id="applicationsList"></div>
+</section>
+
+
+  <footer>
+    <p>&copy; 2025 Placement Portal</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
